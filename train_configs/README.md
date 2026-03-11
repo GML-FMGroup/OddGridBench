@@ -30,7 +30,7 @@ OddGrid-GRPO adopts a **curriculum-guided training strategy**, where the trainin
 - **hard_data_path**  
   Path to the **hard-level training samples**, containing complex discrepancy combinations and challenging cases.
 
-During training, the model is optimized progressively from **easy → medium → hard**, enabling more stable learning and better visual discrepancy sensitivity. Please refer to our [../split_train_data](split_train_data) folder for more details.
+During training, the model is optimized progressively from **easy → medium → hard**, enabling more stable learning and better visual discrepancy sensitivity. Please refer to our **split_train_data** folder for more details.
 
 ## Run Training
 
