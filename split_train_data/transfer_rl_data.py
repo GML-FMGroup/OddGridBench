@@ -52,15 +52,14 @@ def convert_and_save_dataset(json_path: str, image_dir: str, out_path: str, num:
     print(f"✅ 转换完成: {out_path}，共 {len(processed)} 条数据")
     return processed
 
-
 # ===== 示例用法 =====
 if __name__ == "__main__":
-    train_json = "/data/wengtengjin/colorsense/create_data/train_data.json"
-    train_img_dir = "/data/wengtengjin/colorsense/create_data/train_data/image"
+    train_json = "../datasets/OddGridBench/train_data.json"
+    train_img_dir = "../datasets/OddGridBench/train_data/image"
     train_out = "./rl_train.jsonl"
 
-    val_json = "/data/wengtengjin/colorsense/create_data/val_data.json"
-    val_img_dir = "/data/wengtengjin/colorsense/create_data/val_data/image"
+    val_json = "../datasets/OddGridBench/val_data.json"
+    val_img_dir = "../datasets/OddGridBench/val_data/image"
     val_out = "./rl_val.jsonl"
     
     
@@ -70,7 +69,7 @@ if __name__ == "__main__":
     
     
     # 图片路径（所有难度共用）
-    IMAGE_DIR = "/data/wengtengjin/colorsense/create_data/train_data/image"
+    IMAGE_DIR = "../datasets/OddGridBench/train_data/image"
 
     # 输入目录（包含 easy.json / medium.json / hard.json 等）
     INPUT_DIR = "train_easy_med_hard"

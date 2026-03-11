@@ -1,6 +1,6 @@
 data:
-  train_files: /data/wengtengjin/colorsense/rl_train.jsonl
-  val_files: /data/wengtengjin/colorsense/rl_val.jsonl
+  train_files: ../split_train_data/rl_train.jsonl
+  val_files: ../split_train_data/rl_val.jsonl
   prompt_key: problem
   answer_key: answer
   image_key: images
@@ -12,7 +12,7 @@ data:
   rollout_batch_size: 512  # equivalent to verl's data.train_batch_size
   mini_rollout_batch_size: null  # equivalent to verl's data.gen_batch_size
   val_batch_size: 1024
-  format_prompt: ./examples/format_prompt/math.jinja
+  format_prompt: ./format_prompt/oddgrid.jinja
   override_chat_template: null
   shuffle: true
   seed: 1
