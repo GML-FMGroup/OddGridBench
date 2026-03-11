@@ -1,6 +1,6 @@
 import json, math, numpy as np, os
 
-INPUT_JSON = "/data/wengtengjin/colorsense/create_data/train_data.json"
+INPUT_JSON = "../datasets/OddGridBench/train_data.json"
 RATIOS = [0.5, 0.333333333333334, 0.16]  # easy, medium, hard 比例
 
 configs = {
