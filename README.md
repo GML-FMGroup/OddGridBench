@@ -7,9 +7,10 @@ This repository contains the official evaluation code and data for our work.
 📚 Read the paper: [arXiv PDF](https://arxiv.org/pdf/2603.09326) | [arXiv Page](https://arxiv.org/abs/2603.09326)
 
 🌐 [**Project Homepage**](https://wwwtttjjj.github.io/OddGridBench/)  
+
 📊 [**HuggingFace Dataset**](https://huggingface.co/datasets/wwwtttjjj/OddGridBench)
+
 🤖 [**HuggingFace Model**](https://huggingface.co/wwwtttjjj/OddGrid-GRPO)
----
 
 ## Introduction
 
@@ -41,6 +42,7 @@ model = AutoModelForCausalLM.from_pretrained(
     torch_dtype="auto",
     device_map="auto"
 )
+```
 
 ## Evaluation
 
