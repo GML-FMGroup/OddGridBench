@@ -68,10 +68,9 @@ We will promptly review the request and take appropriate action if necessary.
 
 **BibTeX:**
 ```bibtex
-      @inproceedings{weng2025visnumbench,
-        title={VisNumBench: Evaluating Number Sense of Multimodal Large Language Models},
-        author={Tengjin Weng and Wenhao Jiang and Jingyi Wang and Zhong Ming},
-        booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-        year={2025}
-      }
+      @inproceedings{weng2026oddgridbench,
+      title={OddGridBench: Exposing the Lack of Fine-Grained Visual Discrepancy Sensitivity in Multimodal Large Language Models},
+      author={Weng, Tengjin and Jiang, Wenhao and Wang, Jingyi and Li, Ming and Ma, Lin and Ming, Zhong},
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year={2026}}
 ```
