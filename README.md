@@ -4,11 +4,11 @@
 This repository contains the official evaluation code and data for our work.
 
 
-📚 Read the paper: [arXiv PDF](https://arxiv.org/pdf/2503.14939v1) | [arXiv Page](https://arxiv.org/abs/2503.14939v1)
+📚 Read the paper: [arXiv PDF](https://arxiv.org/pdf/2603.09326) | [arXiv Page](https://arxiv.org/abs/2603.09326)
 
 🌐 [**Project Homepage**](https://wwwtttjjj.github.io/OddGridBench/)  
-📊 [**HuggingFace Dataset**](https://huggingface.co/datasets/GML-FMGroup/OddGridBench)
-
+📊 [**HuggingFace Dataset**](https://huggingface.co/datasets/wwwtttjjj/OddGridBench)
+🤖 [**HuggingFace Model**](https://huggingface.co/wwwtttjjj/OddGrid-GRPO)
 ---
 
 ## Introduction
@@ -17,7 +17,7 @@ MLLMs have achieved remarkable performance across a wide range of vision-languag
 
 ## Dataset Creation
 
-OddGridBench is designed to systematically evaluate the visual discrepancy sensitivity of multimodal large language models in a controlled and interpretable setting. The benchmark consists of over **1,400 grid-based images**, where most elements follow a shared visual pattern and only one element deviates from the others. The discrepancy can arise from one or multiple visual attributes, including **color, size, rotation, and position**, enabling fine-grained assessment of perceptual sensitivity under varying difficulty levels. Please refer to our huggingface [**🤗 Dataset**](https://huggingface.co/datasets/GML-FMGroup/OddGridBench) for more details.
+OddGridBench is designed to systematically evaluate the visual discrepancy sensitivity of multimodal large language models in a controlled and interpretable setting. The benchmark consists of over **1,400 grid-based images**, where most elements follow a shared visual pattern and only one element deviates from the others. The discrepancy can arise from one or multiple visual attributes, including **color, size, rotation, and position**, enabling fine-grained assessment of perceptual sensitivity under varying difficulty levels. Please refer to our huggingface [**🤗 Dataset**](https://huggingface.co/datasets/wwwtttjjj/OddGridBench) for more details.
 
 ## Load Dataset
 
@@ -25,14 +25,33 @@ OddGridBench is designed to systematically evaluate the visual discrepancy sensi
 from datasets import load_dataset
 
 # Login using e.g. `huggingface-cli login` to access this dataset
-ds = load_dataset("GML-FMGroup/OddGridBench")
+ds = load_dataset("wwwtttjjj/OddGridBench")
 ```
+
+## Load Model
+
+```python
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_name = "wwwtttjjj/OddGrid-GRPO"
+
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(
+    model_name,
+    torch_dtype="auto",
+    device_map="auto"
+)
+
 ## Evaluation
 
 Please refer to our [eval](eval) folder for more details.
 
 <img src="assets/radar.png"/>
 
+## Training
+
+Please refer to our [train_configs](train_configs) folder for more details.
+<img src="assets/oddgrid-grpo.png"/>
 ## Disclaimers
 
 OddGridBench consists of grid-based images generated from icon assets and programmatic rendering.  We have made every effort to ensure that all visual assets used in this project comply with applicable copyright and licensing requirements. If you are the copyright holder of any asset used in this benchmark and believe that its usage conflicts with your licensing agreement, please [contact](#contact) us directly. 
