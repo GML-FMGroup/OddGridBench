@@ -3,7 +3,7 @@
 import os
 max_new_tokens = 1024
 
-models_dir = "/data/wengtengjin/models/"
+models_dir = "" #模型路径dir
 
 def get_configs(args):
     if args.data_type == "MNIST":
